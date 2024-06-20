@@ -50,9 +50,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts":
+            [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -119,5 +126,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "83b1255c-642b-4f1f-a81d-0787b4e04e20"
   }
 }

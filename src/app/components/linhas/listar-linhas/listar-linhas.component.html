@@ -1,0 +1,42 @@
+<h1 class="my-3 text-primary">
+    Linhas
+    <button type="button" routerLink="/linhas/cadastrar" class="btn btn-success mt-2 float-right">
+      Cadastrar
+    </button>
+  </h1>
+  
+  <div class="card shadow">
+    <table class="table table-responsive table striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Linha</th>
+          <th>Nome da linha</th>
+          <th>Ponto Partida</th>
+          <th>Ponto Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let prod of listalinha">
+            <tr *ngFor="let linha of listalinha">
+            <td>1</td>
+            <td>2033</td>
+            <td>Vila Sabrina</td>
+            <td>AV.Sabtrina</td>
+            <td>Casa do chapeu</td>
+            <td>
+                <button class="btn btn-warning">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </button>
+            </td>
+            <td>
+            <button class="btn btn-danger ml-2">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              </button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+  
