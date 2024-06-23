@@ -1,0 +1,28 @@
+{
+  "linhas": [
+    {
+      "id": "1",
+      "numLinha": "172P",
+      "nomelinha": "Vila Zilda - Metro Belem",
+      "pontoPartida": "Vila Zilda",
+      "pontoFinal": "Metro Belem",
+      "situacao": true
+    },
+    {
+      "id": "2",
+      "numLinha": "2035",
+      "nomelinha": "Santana - Tatuapé",
+      "pontoPartida": "Santana",
+      "pontoFinal": "Tatuapé",
+      "situacao": true
+    },
+    {
+      "id": 3,
+      "numLinha": "1767",
+      "nomelinha": "Tucuruvi - Belem",
+      "pontoPartida": "Tucuruvi",
+      "pontoFinal": "Belem",
+      "situacao": true
+    }
+  ]
+}
