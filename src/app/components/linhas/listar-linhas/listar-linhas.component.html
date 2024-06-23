@@ -27,12 +27,23 @@
             <td>{{ linha.pontoFinal }}</td>
             <td>{{ linha.situacao}}</td>
             <td>
-                <button class="btn btn-warning">
+                <button class="btn btn-warning"
+                  routerLink="/linhas/atualizar/{{ linha.id }}"
+                >
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
             </td>
             <td>
-            <button class="btn btn-danger ml-2" >
+            <button class="btn btn-danger ml-2" > <!-- [swal]="{
+              title: 'ATENÇÃO!!',
+              text: 'Deseja realmente eexcluir a linha: ' + linha.numLinha + '?',
+              showDenyButton: true,
+              denyButtonText: 'Não',
+              coonfirmButtonText: 'Sim, Excluir',
+              icon: 'warrning'
+              }"
+              (confirm)="deletar(linha)"
+              >-->
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               </button>
             </td>

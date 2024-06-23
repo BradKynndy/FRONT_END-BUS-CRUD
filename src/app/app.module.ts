@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Toast, ToastrModule } from 'ngx-toastr';
 import { AtualizarLinhasComponent } from './components/linhas/atualizar-linhas/atualizar-linhas.component';
 
+import {map, catchError} from 'rxjs/operators';
 
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
@@ -23,7 +24,7 @@ import { registerLocaleData } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+//import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
@@ -47,9 +48,9 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    SweetAlert2Module,
-    SweetAlert2Module.forRoot(),
-    SweetAlert2Module.forChild({ /* options */})
+    //SweetAlert2Module,
+    //SweetAlert2Module.forRoot(),
+    //SweetAlert2Module.forChild({ /* options */})
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
