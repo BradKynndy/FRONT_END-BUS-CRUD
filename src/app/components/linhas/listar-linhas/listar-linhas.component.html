@@ -14,23 +14,25 @@
           <th>Nome da linha</th>
           <th>Ponto Partida</th>
           <th>Ponto Final</th>
+          <th>Situação</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let prod of listalinha">
-            <tr *ngFor="let linha of listalinha">
-            <td>1</td>
-            <td>2033</td>
-            <td>Vila Sabrina</td>
-            <td>AV.Sabtrina</td>
-            <td>Casa do chapeu</td>
+        <tr *ngFor = "let linha of listalinhas">
+            <tr *ngFor="let linha of listalinhas">
+            <td>{{ linha.id }}</td>
+            <td>{{ linha.numLinha }}</td>
+            <td>{{ linha.nomelinha }}</td>
+            <td>{{ linha.pontoPartida }}</td>
+            <td>{{ linha.pontoFinal }}</td>
+            <td>{{ linha.situacao}}</td>
             <td>
                 <button class="btn btn-warning">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
             </td>
             <td>
-            <button class="btn btn-danger ml-2">
+            <button class="btn btn-danger ml-2" >
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               </button>
             </td>

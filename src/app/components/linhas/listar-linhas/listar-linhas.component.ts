@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ILinha } from 'src/app/Model/ILinha.model';
+import { LinhaService } from 'src/app/services/linhas.service';
 
 @Component({
   selector: 'app-listar-linhas',
@@ -7,12 +9,41 @@ import { Component } from '@angular/core';
 })
 export class ListarLinhasComponent {
 
-  listalinha: any[] = 
-  [
-    {Id: 1, nomelinha: "AV. Eduardo", pontoPartida: "AV. Eduardo", pontoFinal: "AV. GUILHERME COTCHING", situacao: true},
-    {Id: 2, nomelinha: "AV. Eduardo", pontoPartida: "AV. Eduardo", pontoFinal: "AV. GUILHERME COTCHING", situacao: true}
+  listalinhas:  ILinha[] = [];
 
 
-  ]
+  constructor(private linhasService: LinhaService) {
+
+
+  }
+
+  ngOnInit(): void {
+
+    this.carregarlinhas();
+
+  }
+
+  carregarlinhas(): void {
+
+    this.linhasService.buscarTodos().subscribe(retorno =>{
+
+
+      this.listalinhas = retorno;
+  }
+  )
+
+  }
+
+  deletar(linha: ILinha ): void{
+    this.linhasService.excluir(linha).subscribe(()=> { //TODO: REMOVI .ID DE LINHA
+      this.linhasService.exibirMensagem(
+        'SISTEMA',
+        '${produto.nome} foi excluido com sucesso!',
+        'toast-error');
+
+      });
+
+
+      }
 
 }

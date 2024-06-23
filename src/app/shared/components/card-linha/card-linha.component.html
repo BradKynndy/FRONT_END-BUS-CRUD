@@ -1,0 +1,23 @@
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">
+  
+        {{numLinha | uppercase}}
+        <span *ngIf="situacao == true; else elseBlock" class="badge badge-success" >Situação</span>
+        <ng-template #elseBlock>
+          Situação
+        </ng-template>
+      </h5>
+      <p class="card-text">{{numLinha | uppercase}}</p>
+      <p class="card-text">Indentrificação: {{ id | number:'2.0-3'}}
+        <br>
+        Nome da linha: {{nomelinha}}
+      </p>
+      <a href="#" class="btn btn-primary float-right">{{situacao}}
+  
+      </a>
+  
+    </div>
+  </div>
+  
