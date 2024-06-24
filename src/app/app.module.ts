@@ -24,7 +24,7 @@ import { registerLocaleData } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 
-//import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
@@ -48,9 +48,9 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    //SweetAlert2Module,
-    //SweetAlert2Module.forRoot(),
-    //SweetAlert2Module.forChild({ /* options */})
+    SweetAlert2Module,
+    SweetAlert2Module.forRoot(),
+    SweetAlert2Module.forChild({ /* options */})
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },

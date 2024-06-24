@@ -38,7 +38,7 @@ export class ListarLinhasComponent {
     this.linhasService.excluir(linha).subscribe(()=> { //TODO: REMOVI .ID DE LINHA
       this.linhasService.exibirMensagem(
         'SISTEMA',
-        '${produto.nome} foi excluido com sucesso!',
+        `${linha.numLinha} foi excluido com sucesso!`,
         'toast-error');
 
       });
